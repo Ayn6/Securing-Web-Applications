@@ -28,7 +28,6 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = issuer,
         ValidateAudience = true,
         ValidAudience = audience,
-        ValidateLifetime = true,
         IssuerSigningKey = singingKey,
         ValidateIssuerSigningKey = true
     };

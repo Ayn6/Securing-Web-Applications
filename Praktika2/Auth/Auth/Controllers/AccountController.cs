@@ -12,16 +12,35 @@ namespace Auth.Controllers
     public class AccountController : Controller
     {
         private readonly JWTSettings _jwtSettings;
-        private readonly string _myToken;
         public AccountController(IOptions<JWTSettings> jwtSettings)
         {
             _jwtSettings = jwtSettings.Value;
-            _myToken = GetToken();
         }
 
         [HttpGet("GetToken")]
 
         public string GetToken()
+        {
+            List<Claim> claim = new List<Claim>();
+            claim.Add(new Claim(ClaimTypes.Name, "Nataly"));
+            claim.Add(new Claim("level", "123"));
+            claim.Add(new Claim(ClaimTypes.Role, "Admin"));
+
+            var singingKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.SecretKey));
+
+            var jwt = new JwtSecurityToken(
+                        issuer: _jwtSettings.Issuer,
+                        audience: _jwtSettings.Audience,
+                        claims: claim,
+                        expires: DateTime.UtcNow.Add(TimeSpan.FromHours(1)),
+                        signingCredentials: new SigningCredentials(singingKey, SecurityAlgorithms.HmacSha256)
+                );
+            var token = new JwtSecurityTokenHandler().WriteToken(jwt);
+            return token;
+        }
+        [HttpGet("GetTokenF")]
+
+        public string GetTokenF()
         {
             List<Claim> claim = new List<Claim>();
             claim.Add(new Claim(ClaimTypes.Name, "Nataly"));
@@ -45,7 +64,7 @@ namespace Auth.Controllers
         {
             if (!string.IsNullOrEmpty(token))
             {
-                var currentToken = GetToken();
+                var currentToken = GetTokenF();
                 // Проверяем валидность переданного токена
                 if (token == currentToken)
                 {
