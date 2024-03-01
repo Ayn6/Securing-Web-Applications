@@ -1,0 +1,7 @@
+C:\Users\Анюта\Documents\C#\IP\Ip\bin\Debug\Ip.exe.config
+C:\Users\Анюта\Documents\C#\IP\Ip\bin\Debug\Ip.exe
+C:\Users\Анюта\Documents\C#\IP\Ip\bin\Debug\Ip.pdb
+C:\Users\Анюта\Documents\C#\IP\Ip\obj\Debug\Ip.csproj.AssemblyReference.cache
+C:\Users\Анюта\Documents\C#\IP\Ip\obj\Debug\Ip.csproj.CoreCompileInputs.cache
+C:\Users\Анюта\Documents\C#\IP\Ip\obj\Debug\Ip.exe
+C:\Users\Анюта\Documents\C#\IP\Ip\obj\Debug\Ip.pdb

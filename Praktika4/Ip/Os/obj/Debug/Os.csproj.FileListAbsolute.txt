@@ -1,0 +1,7 @@
+C:\Users\Анюта\Documents\C#\Ip\Os\bin\Debug\Os.exe.config
+C:\Users\Анюта\Documents\C#\Ip\Os\bin\Debug\Os.exe
+C:\Users\Анюта\Documents\C#\Ip\Os\bin\Debug\Os.pdb
+C:\Users\Анюта\Documents\C#\Ip\Os\obj\Debug\Os.csproj.AssemblyReference.cache
+C:\Users\Анюта\Documents\C#\Ip\Os\obj\Debug\Os.csproj.CoreCompileInputs.cache
+C:\Users\Анюта\Documents\C#\Ip\Os\obj\Debug\Os.exe
+C:\Users\Анюта\Documents\C#\Ip\Os\obj\Debug\Os.pdb
